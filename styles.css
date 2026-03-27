@@ -68,6 +68,10 @@ nav button:active {
 #theme-switch-button {
     margin-left: 1rem;
     margin-right: 7.25rem;
+	/* This ensures the background color actually changes */
+body.darkmode {
+    background-color: var(--color-light-purple); 
+}
 }
 .nav-left-side, .nav-right-side {
     display: flex;
@@ -376,4 +380,3 @@ footer a:hover {
     top: -20px;
 }
 }
-
