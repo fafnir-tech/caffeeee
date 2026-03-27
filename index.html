@@ -25,7 +25,7 @@
                         <img id="music-icon" src="images/music-off-icon.png" alt="Music Off" width="32px" height="32px">
                     </button>
                     <button id="theme-switch-button">
-                        <img id="theme-switch-icon" width="32px" height="32px" src="images/moon-icon.png" alt="Dark Mode">
+                        <img id="theme-switch-icon" width="32px" height="32px" src="images/moon.png" alt="Dark Mode">
                     </button>   
                 </div>
                 <audio id="background-music" src="media/cozy-cafe-music.mp3" type="audio/mpeg" loop=""></audio>
@@ -36,7 +36,7 @@
             </div>   
 
             <div display="flex">
-                <img id="header-image" src="images/day.mp4" width="100%" alt="Cafe de Wisteria in daylight">
+                <img id="header-image" src="images/day.gif" width="100%" alt="Cafe de Wisteria in daylight">
             </div>
         </header>
 
@@ -56,7 +56,7 @@
                             Slice of sunshine made from golden carrots and cozy spices
                         </p>
                         <p class="price-tag">
-                            $2.80
+                            ₱280.5
                         </p>
                     </article>
 
@@ -93,7 +93,7 @@
                 <h2 class="section-title">
                     Place Your Order
                 </h2>
-                <form onsubmit="window.open('https://www.youtube.com/watch?v=jA4u5Pur5KA');">                    
+                <form onsubmit="window.open('https://www.youtube.com/watch?v=oUI_tVU77cw&pp=ygUMZ29vZnkgZ29vYmVy');">                    
                     <!--Personal info-->
                     <div class="personal-info">
                         <label for="name">
@@ -185,7 +185,7 @@
 
                     <!--Checkout button-->
                     <div class="submit-button-wrapper">
-                        <input type="submit" value="Go To Checkout 💃">
+                        <input type="submit" value="Go To Checkout 🛒">
                     </div>
                 </form>
             </section>
@@ -196,13 +196,13 @@
                
                 <div class="footer-content">
                      <p>
-                        Made with love by <a href="https://www.instagram.com/fafnir.here/" target="_blank">@Yhouhan</a>
+                        Made by <a href="https://www.instagram.com/fafnir.here/" target="_blank">@Yhouhan </a>
                     </p>
                     <div class="footer-icons">
                         <a href="https://github.com/fafnir-tech" target="_blank">
                             <img class="social-icon" src="images/github-icon.png" alt="GitHub icon">
                         </a>
-                        <a href="https://https://www.instagram.com/fafnir.here/" target="_blank">
+                        <a href="https://www.instagram.com/fafnir.here/" target="_blank">
                             <img class="social-icon" src="images/ig-icon.png" alt="Instagram icon">
                         </a>
                     </div>
@@ -224,34 +224,34 @@
             musicToggle.addEventListener('click', () => {
                 if (isPlaying) {
                     backgroundMusic.pause();
-                    musicIcon.src = 'assets/music-off-icon.png';
+                    musicIcon.src = 'images/music-off-icon.png';
                     musicIcon.alt ='Music Off'
                 } else {
                     backgroundMusic.play();
-                    musicIcon.src = 'assets/music-on-icon.png';
+                    musicIcon.src = 'images/music-on-icon.png';
                     musicIcon.alt ='Music On'
                 }
             isPlaying = !isPlaying;
             });
 
             /*Dark-Light mode*/
-            const themeSwitch = document.getElementById('theme-switch-button');
+       	   const themeSwitch = document.getElementById('theme-switch-button');
             const themeSwitchIcon = document.getElementById('theme-switch-icon');
             const headerImage = document.getElementById('header-image');
 
             const enableDarkmode = () => {
                 document.body.classList.add('darkmode');
-                themeSwitchIcon.src = 'assets/sun-icon.png';
+                themeSwitchIcon.src = 'images/sun-icon.png';
                 themeSwitchIcon.alt = 'light Mode';
-                headerImage.src = 'assets/night-cafe.gif';
+                headerImage.src = 'images/night-cafe.gif';
                 headerImage.alt = 'Cafe de Wisteria at night';
             };
 
             const disableDarkmode = () => {
                 document.body.classList.remove('darkmode');
-                themeSwitchIcon.src = 'assets/moon-icon.png';
+                themeSwitchIcon.src = 'assets/moon.png';
                 themeSwitchIcon.alt = 'Dark Mode';
-                headerImage.src = 'assets/day-cafe.gif';
+                headerImage.src = 'images/day-cafe.gif';
                 headerImage.alt = 'Cafe de Wisteria in daylight';
             };
 
