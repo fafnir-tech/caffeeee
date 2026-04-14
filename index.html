@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--tab-->
+        <title>Cafe De Wisteria</title>
+        <link rel="icon" href="images/carrot_cake.png" type="image/png">
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!--CSS-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <!--Nav section-->
+        <header>
+            <nav>
+                <div class="nav-left-side">
+                 
+					 <a href="index.html"><button class="menu-button">Home</button></a>
+                <a href="gallery.html"><button class="menu-button">Gallery</button></a>
+                
+                <a href="contact.html"><button class="menu-button">Contact</button></a>
+				<a href="about.html"><button class="menu-button">About</button></a>
+                </div>
+                <div class="nav-right-side">
+                    <button id="music-toggle">
+                        <img id="music-icon" src="images/music-off-icon.png" alt="Music Off" width="32px" height="32px">
+                    </button>
+                    <button id="theme-switch-button">
+                       
+                    </button>   
+                </div>
+                <audio id="background-music" src="media/cozy-cafe-music.mp3" type="audio/mpeg" loop=""></audio>
+            </nav>
+
+            <div class="cafe-name">
+                <h1>CAFE DE WISTERIA</h1>
+            </div>   
+
+            <div display="flex">
+                <img id="header-image" src="images/day.gif" width="100%" alt="Cafe de Wisteria in daylight">
+            </div>
+  
+        <!-- I struggled with the JS part, but after watching tutorials and doing some research, I actually made it work 😄 -->
+        <script>
+            /*Background Music*/
+            const musicToggle = document.getElementById('music-toggle');
+            const musicIcon = document.getElementById('music-icon');
+            const backgroundMusic = document.getElementById('background-music');
+
+            let isPlaying = false;
+
+            musicToggle.addEventListener('click', () => {
+                if (isPlaying) {
+                    backgroundMusic.pause();
+                    musicIcon.src = 'images/music-off-icon.png';
+                    musicIcon.alt ='Music Off'
+                } else {
+                    backgroundMusic.play();
+                    musicIcon.src = 'images/music-on-icon.png';
+                    musicIcon.alt ='Music On'
+                }
+            isPlaying = !isPlaying;
+            });
+
+            /*Dark-Light mode*/
+    
+            const themeSwitchIcon = document.getElementById('theme-switch-icon');
+            const headerImage = document.getElementById('header-image');
+
+            const enableDarkmode = () => {
+                document.body.classList.add('darkmode');
+               
+				
+            };
+
+            const disableDarkmode = () => {
+               
+                headerImage.src = 'images/day-cafe.gif';
+                headerImage.alt = 'Cafe de Wisteria in daylight';
+            };
+
+            disableDarkmode();
+
+            themeSwitch.addEventListener('click', () => {
+                if (!document.body.classList.contains('darkmode')) {
+                enableDarkmode();
+                } else {
+                disableDarkmode();
+                }
+            });
+        </script>
+    
+
+
+
+
+</body></html>

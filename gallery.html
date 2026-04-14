@@ -1,0 +1,192 @@
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--tab-->
+        <title>Cafe De Wisteria</title>
+        <link rel="icon" href="images/carrot_cake.png" type="image/png">
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!--CSS-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<header>
+    <nav>
+        <div class="nav-left-side">
+            <button class="menu-button" onclick="location.href='index.html'">Home</button>
+            <button class="menu-button" onclick="location.href='gallery.html'">Gallery</button>
+            <button class="menu-button" onclick="location.href='about.html'">About</button>
+            <button class="menu-button" onclick="location.href='contact.html'">Contact</button>
+        </div>
+        <div class="nav-right-side">
+            <button id="music-toggle">
+                <img id="music-icon" src="images/music-off-icon.png" alt="Music Off" width="32px" height="32px">
+            </button>
+            <button id="theme-switch-button">
+                <img id="theme-switch-icon" width="32px" height="32px" src="images/moon.png" alt="Dark Mode">
+            </button>   
+        </div>
+    </nav>
+
+    <div class="cafe-name">
+        <h1>GALLERY</h1>
+    </div>   
+</header>
+
+<main>
+    <section id="menu-section">
+        <div class="cakes-grid">
+            </div>
+    </section>
+</main>
+     
+                
+  <main>
+            <!--Menu Section-->
+            <section id="menu-section">
+                <h2 class="section-title">
+                    Menu
+                </h2>
+                <div class="cakes-grid">
+                    <article class="cake-card">
+                        <img class="cake-pixel-art" src="images/carrot_cake.png" alt="A slice of carrot cake topped with a tiny marzipan carrot">
+                        <h3 style="color:#fb8420 ">
+                            Carrot Cake
+                        </h3>
+                        <p>
+                            Slice of sunshine made from golden carrots and cozy spices
+                        </p>
+                        <p class="price-tag">
+                            ₱280.5
+                        </p>
+                    </article>
+
+                    <article class="cake-card">
+                        <img class="cake-pixel-art" src="images/strawberry_cake.png" alt="A slice of strawberry cake filled and topped with a fresh strawberry">
+                        <h3 style="color: #c63228">
+                            Strawberry Cake
+                        </h3>
+                        <p>
+                            Sweet, fluffy cake with heavenly tasting strawberries
+                        </p>
+                        <p class="price-tag">
+                            $3.40
+                        </p>
+                    </article>
+                    
+                    <article class="cake-card">
+                        <img class="cake-pixel-art" src="images/choco-banana_cake.png" alt="A slice of chocolate-banana cake, topped with banana slices and chocolate glaze">
+                        <h3 style="color: #400208">
+                            Choco-banana Cake
+                        </h3>
+                        <p>
+                            Chocolatey banana dream, made for midnight cravings
+                        </p>
+                        <p class="price-tag">
+                            $3.20
+                        </p>
+                    </article>
+                </div>
+            </section>
+			<!--Place your order section-->
+            <section id="order-section">
+                <h2 class="section-title">
+                    Place Your Order
+                </h2>
+                <form onsubmit="window.open('https://www.youtube.com/watch?v=oUI_tVU77cw&pp=ygUMZ29vZnkgZ29vYmVy');">                    
+                    <!--Personal info-->
+                    <div class="personal-info">
+                        <label for="name">
+                            Name
+                        </label>
+                        <input id="name" type="text">
+                    </div>
+
+                    <div class="personal-info">
+                        <label for="email">
+                            Email
+                        </label>
+                        <input id="email" type="email">
+                    </div>
+
+                    <!--Cake options-->
+                    <div class="fields">
+                        <h4>
+                            It's a cake time! 💃 Which flavor are you craving today?
+                        </h4>
+                        <label for="carrot-cake">
+                            🥕 Carrot Cake
+                        </label>
+                        <input id="carrot-cake" type="number" min="0" max="10">
+                        <br>
+                        <label for="strawberry-cake">
+                            🍓 Strawberry Cake
+                        </label>
+                        <input id="strawberry-cake" type="number" min="0" max="10">
+                        <br>
+                        <label for="choco-banana-cake">
+                            🍌 Choco-banana Cake
+                        </label>
+                        <input id="choco-banana-cake" type="number" min="0" max="10">
+                    </div>
+                    
+
+                    <!--Drink options-->
+                    <div class="fields">
+                        <h4>
+                            What would you like to drink?
+                        </h4>
+                        <label for="pink-drink">
+                            💗 Pink Drink
+                        </label>
+                        <input id="pink-drink" type="number" min="0" max="10">
+                        <br>
+                        <label for="matcha-iced-coffee">
+                            💚 Matcha Iced Coffee
+                        </label>
+                        <input id="matcha-iced-coffee" type="number" min="0" max="10">
+                        <br>
+                        <label for="lavender-milk-tea">
+                            💜 Lavender Milk Tea
+                        </label>
+                        <input id="lavender-milk-tea" type="number" min="0" max="10">
+                    </div>
+                  
+
+                    <!--Sides-->
+                    <div class="fields">
+                        <h4>
+                            Would you like something on the side?
+                        </h4>
+                        <label for="vanilla-ice-cream">
+                        <input id="vanilla-ice-cream" type="checkbox">
+                            🍨 Vanilla ice-cream
+                        </label>
+                        <br>
+                        <label for="chocolate-dipping-sauce">
+                        <input id="chocolate-dipping-sauce" type="checkbox">
+                            🍫 Chocolate dipping sauce
+                        </label>
+                        <br>
+                        <label for="cup-of-fruits">
+                        <input id="cup-of-fruits" type="checkbox">
+                            🍍 Small cup of fresh fruit
+                        </label>
+                    </div>
+
+
+                    <!--Special requests-->
+                    <div class="fields">
+                        <h4>
+                            Let us know if you have any special requests or want to add a message.
+                        </h4>
+                        <textarea placeholder="Add notes like no nuts, extra napkins, or gift wrap it please."></textarea>  
+                    </div>
+
+                    <!--Checkout button-->
+                    <div class="submit-button-wrapper">
+                        <input type="submit" value="Go To Checkout 🛒">
+                    </div>
+                </form>
+            </section>
